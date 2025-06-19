@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="180dp">
+
+        <com.hbisoft.pinlockr.customfonts.MediumFont
+            android:id="@+id/text_info"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:text="SET PASSWORD"
+            android:textSize="28sp" />
+
+        <com.hbisoft.pinlockr.IndicatorDots
+            android:id="@+id/indicator_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp" />
+
+        <com.hbisoft.pinlockr.PinlockrView
+            android:id="@+id/pin_lock_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicator_dots"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:keypadButtonSize="82dp"
+            app:keypadDeleteButtonSize="24dp"
+            app:keypadDeleteButtonPressedColor="@color/black"
+            app:keypadShowDeleteButton="true"
+            app:keypadTextColor="@color/black"
+            app:keypadTextSize="18dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
