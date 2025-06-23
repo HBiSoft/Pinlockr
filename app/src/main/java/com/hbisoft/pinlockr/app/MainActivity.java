@@ -1,4 +1,4 @@
-package com.hbisoft.pinlockr;
+package com.hbisoft.pinlockr.app;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.hbisoft.pinlockr.IndicatorDots;
+import com.hbisoft.pinlockr.PinlockrListener;
+import com.hbisoft.pinlockr.PinlockrView;
 import com.hbisoft.pinlockr.customfonts.MediumFont;
 
 

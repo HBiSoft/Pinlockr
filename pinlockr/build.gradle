@@ -1,5 +1,7 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
     namespace 'com.hbisoft.pinlockr'
@@ -7,8 +9,6 @@ android {
 
     defaultConfig {
         minSdk 24
-        targetSdk 34
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -20,13 +20,17 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
             withJavadocJar()
         }
     }
-
 }
 
 dependencies {
@@ -46,6 +50,22 @@ afterEvaluate {
                 groupId = 'com.github.HBiSoft'
                 artifactId = 'Pinlockr'
                 version = '0.0.3'
+                pom {
+                    name = 'Pinlockr'
+                    description = 'A library for PIN-based locking with biometric support'
+                    url = 'https://github.com/HBiSoft/pinlockr'
+                    developers {
+                        developer {
+                            id = 'hbiSoft'
+                            name = 'Hagen Brooks'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:git://github.com/HBiSoft/pinlockr.git'
+                        developerConnection = 'scm:git:ssh://github.com/HBiSoft/pinlockr.git'
+                        url = 'https://github.com/HBiSoft/pinlockr'
+                    }
+                }
             }
         }
     }
