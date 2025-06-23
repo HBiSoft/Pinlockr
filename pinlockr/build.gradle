@@ -25,12 +25,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            //withJavadocJar()
-        }
-    }
+
 }
 
 dependencies {
@@ -42,31 +37,3 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.HBiSoft'
-                artifactId = 'Pinlockr'
-                version = '0.0.4'
-                pom {
-                    name = 'Pinlockr'
-                    description = 'A library for PIN-based locking with biometric support'
-                    url = 'https://github.com/HBiSoft/pinlockr'
-                    developers {
-                        developer {
-                            id = 'hbiSoft'
-                            name = 'Hagen Brooks'
-                        }
-                    }
-                    scm {
-                        connection = 'scm:git:git://github.com/HBiSoft/pinlockr.git'
-                        developerConnection = 'scm:git:ssh://github.com/HBiSoft/pinlockr.git'
-                        url = 'https://github.com/HBiSoft/pinlockr'
-                    }
-                }
-            }
-        }
-    }
-}
