@@ -69,9 +69,7 @@ afterEvaluate {
             }
         }
         repositories {
-            maven {
-                url = layout.buildDirectory.dir('repo')
-            }
+            mavenLocal()
         }
     }
 }
