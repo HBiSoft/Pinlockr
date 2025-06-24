@@ -1,4 +1,2 @@
 jdk:
   - openjdk17
-install:
-  - ./gradlew clean :pinlockr:assembleRelease :pinlockr:publishToMavenLocal --no-daemon --stacktracece
