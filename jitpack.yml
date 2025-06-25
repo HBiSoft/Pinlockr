@@ -1,5 +1,4 @@
 jdk:
   - openjdk17
-
 install:
-  - ./gradlew clean :pinlockr:publish --no-daemon --stacktrace --info
+  - ./gradlew clean :pinlockr:publish --no-daemon --stacktrace

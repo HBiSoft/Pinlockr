@@ -31,9 +31,6 @@ android {
             withJavadocJar()
         }
     }
-
-
-
 }
 
 dependencies {
@@ -53,22 +50,6 @@ afterEvaluate {
                 groupId = 'com.github.HBiSoft'
                 artifactId = 'Pinlockr'
                 version = '0.0.4'
-
-                // Attach the AAR file manually
-                artifact("$buildDir/outputs/aar/pinlockr-release.aar") {
-                    extension = "aar"
-                }
-
-                // Optional: attach sources and javadoc if you're using them
-                artifact tasks.named("sourceReleaseJar")
-                artifact tasks.named("javaDocReleaseJar")
-
-            }
-        }
-
-        repositories {
-            maven {
-                url = "$buildDir/repo"
             }
         }
     }
