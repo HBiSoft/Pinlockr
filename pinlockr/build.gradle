@@ -53,22 +53,6 @@ afterEvaluate {
                 groupId = 'com.github.HBiSoft'
                 artifactId = 'Pinlockr'
                 version = '0.0.4'
-                pom {
-                    name = 'Pinlockr'
-                    description = 'A library for PIN-based locking with biometric support'
-                    url = 'https://github.com/HBiSoft/pinlockr'
-                    developers {
-                        developer {
-                            id = 'hbiSoft'
-                            name = 'Hagen Brooks'
-                        }
-                    }
-                    scm {
-                        connection = 'scm:git:git://github.com/HBiSoft/pinlockr.git'
-                        developerConnection = 'scm:git:ssh://github.com/HBiSoft/pinlockr.git'
-                        url = 'https://github.com/HBiSoft/pinlockr'
-                    }
-                }
             }
         }
     }
